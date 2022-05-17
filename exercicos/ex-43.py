@@ -1,0 +1,5 @@
+v = float(input('Qual valor da venda?\n'))
+print(f'O total a pagar com desconto de 10%: R${(v - (v * 0.10))}')
+print(f'O valor de cada parcela em 3x s/juros: R${v / 3}')
+print(f'Comissão do vendedor com a venda a vista: R${(v - (v * 0.10)) * 0.05}')
+print(f'Comissão do vendedor com a venda paracelada: R${(v /3) * 0.05}')
