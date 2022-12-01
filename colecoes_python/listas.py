@@ -205,3 +205,121 @@ indice = 0
 while indice < len(cores):
     print(cores[indice])
     indice = indice + 1
+
+# Gerar indice em um for
+for indice, cor in enumerate(cores):
+    print(indice, cor)
+
+# Listas aceitam valores repetidos
+lista = []
+lista.append(42)
+lista.append(42)
+lista.append(33)
+lista.append(33)
+lista.append(42)
+
+print(lista)
+
+# Outros métodos não tão importantes mas também úteis
+
+# Encontrar o índice de um lemento na lista
+
+numeros =[5, 6, 7, 5, 8, 9, 10]
+
+# Em qual índice está o valor 6?
+print(numeros.index(6))
+# Em qual índice está o valor 9?
+print(numeros.index(9))
+
+# OBS: Caso não tenha este lemento na lista, será apresentado erro ValueError
+
+print(numeros.index(5)) # Retorna o índece do primeir elemento encontrado
+
+# Podemos fazer busca dentro de um range, ou seja, qual índece começar a buscar
+print(numeros.index(5, 1)) # Buscando a partir do índice 1
+
+# Podemos fazer busca dentro de um range, ínicio/fim
+print(numeros.index(8, 3, 6)) # Buscamos o índice do valor 8, entre os índices 3 a 6
+
+# Revisão de slicing
+# lista[inicio:fim:passo]
+# range(inicio:fim:passe)
+
+# Trabalhando com slice de lista com o parâmetro 'início'
+
+lista = [1, 2, 3, 4]
+print(lista[1:]) # Iniciando no índice 1 e pegando todos os elemntos restantes
+
+# Invertendo valores em uma lista
+nome = ['geek', 'university']
+
+nome[0], nome[1] = nome[1], nome[0]
+print(nome)
+
+nomes = ['geek', 'university']
+nomes.reverse()
+print(nomes)
+
+# Soma, valor máximo, valor mínimo, tamanho
+
+# Se os valores forem todos inteiros ou reais
+
+lista = [1, 2, 3, 4, 5, 6]
+
+print(sum(lista))  # soma
+print(max(lista))  # máximo valor
+print(min(lista))  # mínimo valor
+print(len(lista))  # tamanho da lista e funciona em qualquer tipo de dado
+
+# Transformaar uma lista em tupla
+
+lista = [1, 2, 3, 4, 5, 6]
+print(lista)
+print(type(lista))
+
+tupla = tuple(lista)
+print(tupla)
+print(type(tupla))
+
+# Dsempacotamentode listas
+
+lista = [1, 2, 3]
+num1, num2, num3 = lista
+
+print(num1)
+print(num2)
+print(num3)
+
+# OBS: Se tivermos um número diferente de elemntos na lista ou variáveis para receber os dados, teremos ValueError
+
+# Copiando u lista para outra (Shallow Copy e Deep Copy)
+
+# Forma 1
+
+lista = [1, 2, 3]
+print(lista)
+
+nova = lista.copy()
+print(nova)
+
+nova.append(4)
+print(lista)
+print(nova)
+
+# Veja que ao utilizarmos lista.copy copiamos dados da lista parra uma nova lista, mas elas totalmente indepedentes,
+# ou seja, modificando uma lista, não afeta a outra. Isso em Python é chamado de DEep COpy (cópia profunda)
+
+#Forma 2 - Shallow Copy
+lista = [1, 2, 3]
+print(lista)
+
+nova = lista  #cópia
+print(nova)
+
+nova.append(4)
+print(lista)
+print(nova)
+
+# Veja que utilizamos a cópia via atribuição e copiamos os dados da lista para a nova lista, mas
+# após realizar modificação em uma listas, essa modificação se refletiu em ambas as listas. Isso em Python é
+# chamado de Shallow Copy.
